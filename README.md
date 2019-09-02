@@ -1,6 +1,4 @@
 # LeetCode
-=====
-
 |Label|[stack](https://github.com/LHesperus/leetcode/tree/master/stack)| |
 
 | # | Title | Solution | Difficulty | Label |
