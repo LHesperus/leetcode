@@ -1,6 +1,6 @@
 # LeetCode
 =====
- 自己解的leetcode题目整理<br>
+
 |Label|[stack](https://github.com/LHesperus/leetcode/tree/master/stack)| |
 
 | # | Title | Solution | Difficulty | Label |
