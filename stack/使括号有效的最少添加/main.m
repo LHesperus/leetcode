@@ -15,17 +15,17 @@ int AddBrace(string s)
 		}
 		else 
 		{
-			if (stk.empty() == true)
+			if (stk.empty() == true)//如果是空说明s[i]无匹配括号，cnt计数加1
 			{
 				cnt++;
 			}
 			else 
 			{
-				stk.pop();
+				stk.pop();//匹配括号，弹出
 			}
 		}
 	}
-	return stk.size() + cnt;
+	return stk.size() + cnt;//stk.size()表示遍历括号后栈内剩余的未匹配括号数
 
 }
 
