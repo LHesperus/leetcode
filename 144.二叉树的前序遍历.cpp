@@ -16,8 +16,21 @@
  */
 class Solution {
 public:
+    void preorder(TreeNode*root,vector<int>&stk)
+    {
+        if(root!=NULL)
+        {
+            stk.emplace_back(root->val);
+            if(root->left!=NULL)
+                preorder(root->left,stk);
+            if(root->right!=NULL)
+                preorder(root->right,stk);
+        }
+    }
     vector<int> preorderTraversal(TreeNode* root) {
-
+        vector<int> ans;
+        preorder(root,ans);
+        return ans;
     }
 };
 // @lc code=end
