@@ -2,6 +2,9 @@
  * @lc app=leetcode.cn id=889 lang=cpp
  *
  * [889] 根据前序和后序遍历构造二叉树
+ * 前序：根左右，
+ * 后序：左右根
+ * 每次迭代，确定下次前序后序的位置
  */
 
 // @lc code=start
@@ -13,6 +16,7 @@
  *     TreeNode *right;
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
+ *
  */
 class Solution {
 public:

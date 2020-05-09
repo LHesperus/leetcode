@@ -1,8 +1,7 @@
 /*
- * @lc app=leetcode.cn id=116 lang=cpp
+ * @lc app=leetcode.cn id=117 lang=cpp
  *
- * [116] 填充每个节点的下一个右侧节点指针
- * 运用队列queue层序遍历
+ * [117] 填充每个节点的下一个右侧节点指针 II
  */
 
 // @lc code=start
@@ -28,9 +27,9 @@ class Solution {
 public:
     Node* connect(Node* root) {
         if(root==NULL) return NULL;
-        queue<Node*>q;
+        queue<Node*> q;
         q.push(root);
-        Node* rt;
+        Node *rt;
         while(q.size())
         {
             for(int i=q.size();i>0;i--)
@@ -44,17 +43,11 @@ public:
                 {
                     rt->next=NULL;
                 }
-                if(rt->left)
-                {
-                    q.push(rt->left);
-                }
-                if(rt->right)
-                {
-                    q.push(rt->right);
-                }
+                if(rt->left) q.push(rt->left);
+                if(rt->right) q.push(rt->right);
             }
         }
-        return root;  
+        return root;
     }
 };
 // @lc code=end
