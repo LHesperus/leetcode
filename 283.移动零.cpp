@@ -8,19 +8,17 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        for(int i=nums.size()-1;i>=0;i--)
+        vector<int> ans;
+        for(int i=0;i<nums.size();i++)
         {
-            if(!nums[i])
-            {
-                for(int j=i+1;j<nums.size();j++)
-                {
-                    if(nums[j]!=0)
-                        swap(nums[j-1],nums[j]);
-                    else
-                        break;
-                }
-            }
+            if(nums[i]!=0)
+                ans.emplace_back(nums[i]);
         }
+        for(int i=ans.size();i<nums.size();i++)
+        {
+            ans.emplace_back(0);
+        }
+        swap(ans,nums);
     }
 };
 // @lc code=end
